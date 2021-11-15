@@ -1,3 +1,5 @@
+@import url('https://typekit.com/fonts/europa');
+@import url('https://typekit.com/fonts/rift-soft');
 // resets
 * {
     box-sizing: border-box;
@@ -5,7 +7,103 @@
     padding: 0;
 }
 
-// toggle slider styles
+// variables
+// colors:
+// -primary
+$primary-sage: #87BCBF;
+$primary-rust: #D97D54;
+$primary-drab: #324755;
+$primary-danger: #D95454;
+//-secondary
+$secondary-ice: #F0F3F4;
+$secondary-fossil: #C8D1D3;
+$secondary-sand: #B9B0A2;
+//-typography
+$typo-onyx: #1B1C20;
+$typo-slate: #6E8CA0;
+$typo-snow: #FFFFFF;
+// typography - fonts:
+$primary-typo: Europe;
+$secondary-typo: Rift Soft;
+// Typography utility classes
+._primary-heading {
+    font-family: $primary-typo;
+    color: $typo-onyx;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+._secondary-heading {
+    font-family: $primary-typo;
+    color: $typo-onyx;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+._section-heading {
+    font-family: $primary-typo;
+    color: $typo-onyx;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+._subtitle-heading {
+    font-family: $primary-typo;
+    color: $typo-slate;
+    font-size: 18pt;
+    font-weight: light;
+}
+
+._card-title {
+    font-family: $primary-typo;
+    color: $typo-onyx;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+._card-copy-small {
+    font-family: $primary-typo;
+    color: $typo-slate;
+    font-size: 15pt;
+    font-weight: light;
+}
+
+._body-copy-small {
+    font-family: $primary-typo;
+    color: $typo-slate;
+    font-size: 14pt;
+    font-weight: light;
+}
+
+._message-time-stamp {
+    font-family: $primary-typo;
+    color: $typo-slate;
+    font-size: 12pt;
+    font-weight: light;
+}
+
+._button-label-dark {
+    font-family: $secondary-typo;
+    color: $typo-onyx;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+._button-label-light {
+    font-family: $secondary-typo;
+    color: $typo-snow;
+    font-size: 14pt;
+    font-weight: light;
+}
+
+._card-subtitle {
+    font-family: $secondary-typo;
+    color: $typo-slate;
+    font-size: 10pt;
+    font-weight: light;
+}
+
+// toggle for categories - slider styles
 
 /* The switch - the box around the slider */
 

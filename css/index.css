@@ -1,7 +1,86 @@
+@import url("https://typekit.com/fonts/europa");
+@import url("https://typekit.com/fonts/rift-soft");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+._primary-heading {
+  font-family: Europe;
+  color: #1B1C20;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+._secondary-heading {
+  font-family: Europe;
+  color: #1B1C20;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+._section-heading {
+  font-family: Europe;
+  color: #1B1C20;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+._subtitle-heading {
+  font-family: Europe;
+  color: #6E8CA0;
+  font-size: 18pt;
+  font-weight: light;
+}
+
+._card-title {
+  font-family: Europe;
+  color: #1B1C20;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+._card-copy-small {
+  font-family: Europe;
+  color: #6E8CA0;
+  font-size: 15pt;
+  font-weight: light;
+}
+
+._body-copy-small {
+  font-family: Europe;
+  color: #6E8CA0;
+  font-size: 14pt;
+  font-weight: light;
+}
+
+._message-time-stamp {
+  font-family: Europe;
+  color: #6E8CA0;
+  font-size: 12pt;
+  font-weight: light;
+}
+
+._button-label-dark {
+  font-family: Rift Soft;
+  color: #1B1C20;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+._button-label-light {
+  font-family: Rift Soft;
+  color: #FFFFFF;
+  font-size: 14pt;
+  font-weight: light;
+}
+
+._card-subtitle {
+  font-family: Rift Soft;
+  color: #6E8CA0;
+  font-size: 10pt;
+  font-weight: light;
 }
 
 /* The switch - the box around the slider */
