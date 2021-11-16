@@ -20,6 +20,7 @@ axios.get(urlHome).then(response => {
         if (el.section === 'business') {
 
             businessNewsArray.push(el);
+
             // console.log(businessNewsArray);
 
         } else if (el.section === 'world' && el.subsection === 'europe') {
