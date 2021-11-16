@@ -18,21 +18,34 @@ axios.get(urlHome).then(response => {
 
 
         if (el.section === 'business') {
+
             businessNewsArray.push(el);
-        } else if (el.subsection === 'europe') {
+            // console.log(businessNewsArray);
+
+        } else if (el.section === 'world' && el.subsection === 'europe') {
+
             europeNewsArray.push(el);
+
         } else if (el.section === 'health') {
+
             healthNewsArray.push(el);
+
         } else if (el.section === 'sports') {
+
             sportsNewsArray.push(el);
+
         } else if (el.section === 'travel') {
+
             travelNewsArray.push(el);
+
         } else {
-            console.log('No articles matches any categories!')
+
+            console.log('Some articles matches any categories!')
+
         };
 
     });
 
-    console.log(europeNewsArray);
+    // console.log(europeNewsArray);
 
 });
