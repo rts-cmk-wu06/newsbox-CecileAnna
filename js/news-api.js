@@ -41,7 +41,7 @@ axios.get(urlHome).then(response => {
 
         } else {
 
-            console.log('Some articles matches any categories!')
+            console.log('Some articles does not match any categories!')
 
         };
 
