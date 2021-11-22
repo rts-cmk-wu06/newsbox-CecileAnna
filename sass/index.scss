@@ -112,12 +112,15 @@ $secondary-typo: Rift Soft;
     display: inline-block;
     width: 60px;
     height: 34px;
-    /* Hide default HTML checkbox */
-    input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
+}
+
+
+/* Hide default HTML checkbox */
+
+._input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 
@@ -133,7 +136,7 @@ $secondary-typo: Rift Soft;
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-     :before {
+    &:before {
         position: absolute;
         content: "";
         height: 26px;
@@ -148,10 +151,10 @@ $secondary-typo: Rift Soft;
 
 ._input:checked+._slider {
     background-color: #2196F3;
-     :focus+._slider {
+    &:focus+._slider {
         box-shadow: 0 0 1px #2196F3;
     }
-     :checked+._slider:before {
+    &:checked+._slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px);
@@ -163,10 +166,9 @@ $secondary-typo: Rift Soft;
 
 ._slider._round {
     border-radius: 34px;
-}
-
-._slider._round:before {
-    border-radius: 50%;
+    &:before {
+        border-radius: 50%;
+    }
 }
 
 //header styles
@@ -176,71 +178,192 @@ $secondary-typo: Rift Soft;
     padding: 2rem 1.5rem;
     width: 100%;
     gap: 0.7rem;
+    &__top {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    &__bottom-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    &__nav {
+        color: $primary-drab;
+    }
+    &__icons-wrapper {
+        display: flex;
+        gap: 0.3rem;
+    }
+    &__icon-top {
+        font-size: 1rem;
+        color: $typo-onyx;
+    }
+    &__time-exact {
+        font-weight: bold;
+    }
+    &__icon-buttom {
+        font-size: 1.5rem;
+    }
+    &__h1 {
+        font-size: 1.5rem;
+        color: $primary-drab;
+    }
 }
 
-.Header__top {
+//main
+.Main {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.Header__bottom-nav {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.Header__nav {
-    color: $primary-drab;
-}
-
-.Header__icons-wrapper {
-    display: flex;
-    gap: 0.3rem;
-}
-
-.Header__icon-top {
-    font-size: 1rem;
-    color: $typo-onyx;
-}
-
-.Header__time-exact {
-    font-weight: bold;
-}
-
-.Header__icon-buttom {
-    font-size: 1.5rem;
-}
-
-.Header__h1 {
-    font-size: 1.5rem;
-    color: $primary-drab;
+    justify-content: center;
 }
 
 // search-bar styles
-.Search__ {
+.Search {
     display: flex;
     flex-flow: column-reverse nowrap;
     justify-content: center;
+    align-items: center;
     position: absolute;
-    padding: 1rem;
+    padding: 0 1rem 0.7rem 1rem;
+    margin: 0;
+    border-top: 0.08rem solid rgba(207, 202, 202, 0.822);
+    border-bottom: 0.08rem solid rgba(207, 202, 202, 0.822);
+    width: 100%;
+    &__input {
+        background: #F0F3F4;
+        padding: 1rem;
+        margin: 1rem;
+        z-index: 4;
+        border-radius: 3px;
+        color: $secondary-fossil;
+        border: none;
+        width: 100%;
+    }
+    &__icon {
+        position: relative;
+        top: 3rem;
+        left: 36%;
+        z-index: 6;
+        color: $secondary-fossil;
+    }
 }
 
-.Search__input {
-    background: #F0F3F4;
-    padding: 1rem 1rem 1rem 2.5rem;
-    margin: 1rem;
-    z-index: 4;
-    border-radius: 3px;
-    color: $secondary-fossil;
-    border: none;
-    width: 90%;
+//news-cards
+//category bar styles
+.News-category {
+    display: flex;
+    flex-flow: column nowrap;
+    &__bar {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    &__content-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-top: 0.08rem solid rgba(207, 202, 202, 0.822);
+        border-bottom: 0.08rem solid rgba(207, 202, 202, 0.822);
+    }
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        object-fit: cover;
+        height: 2.6rem;
+        width: 2.6rem;
+        border-radius: 100%;
+        box-shadow: 0.08rem 0.7rem 1rem rgba(95, 93, 93, 0.7);
+    }
+    &__title {
+        padding-left: 1rem;
+        text-transform: uppercase;
+    }
+    &__icon-wrapper {
+        display: flex;
+        font-size: 1.3rem;
+    }
+    &__icon-down {
+        color: $primary-drab;
+    }
+    &__icon-right {
+        color: $primary-drab;
+    }
+    // category card wrapper
+    &__cards-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }
 
-.Search__icon {
-    position: relative;
-    top: -3rem;
-    left: 80%;
-    z-index: 6;
-    color: $secondary-fossil;
+// card styles
+.News-card {
+    // display: flex;
+    // flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-auto-rows: 21vh;
+    transition: height 1.5s ease-in-out;
+    &__front {
+        display: flex;
+        padding: 2rem 1rem;
+        height: 21vh;
+        background-color: white;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    &__img {
+        object-fit: cover;
+        height: 4.2rem;
+        width: 4.2rem;
+        border-radius: 100%;
+    }
+    &__text-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-left: 1rem;
+    }
+    &__h3 {
+        margin-bottom: 0.4rem;
+    }
+    &__p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    //delete or archive divs
+    &__delete-div {
+        height: 21vh;
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-danger;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    &__save-div {
+        height: 21vh;
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-sage;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    &__delete-save-icon {
+        font-size: 2rem;
+        color: white;
+    }
 }

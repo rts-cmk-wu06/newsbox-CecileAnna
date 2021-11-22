@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardcoding templates for news cards</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -14,49 +15,65 @@
 
     <main class="News-main">
 
-        <section class="News-category__bar" id="News-category-business">
+        <section class="News-category">
 
-            <div class="News-category__content-wrapper">
+            <section class="News-category__bar" id="News-category-business">
 
-                <img src="" alt="Category icon" class="News-category__img">
+                <div class="News-category__content-wrapper">
 
-                <h2 class="News-catgory__title _section-heading">Category</h2>
+                    <div class="News-category__title-wrapper">
 
-                <i class="fas fa-chevron-down News-category__icon-down"></i>
+                        <img src="https://picsum.photos/100/100" alt="Category icon" class="News-category__img">
 
-                <i class="fas fa-chevron-right News-category__icon-right"></i>
-
-            </div>
-
-            <div class="News-category__cards-wrapper">
-
-                <section class="News-card">
-
-                    <div class="News-card__front">
-
-                        <img src="" alt="Article image" class="News-card__img">
-
-                        <h3 class="News-card__h3 _card-title">Headline</h3>
-
-                        <p class="News-card__p _card-copy-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi delectus nesciunt nostrum officiis veritatis.</p>
+                        <h2 class="News-category__title _section-heading">Category</h2>
 
                     </div>
 
-                    <div class="News-card__delete-div">
+                    <div class="News-category__icon-wrapper">
 
-                        <i class="fas fa-trash News-card__delete-icon"></i>
+                        <i class="fas fa-chevron-down News-category__icon-down"></i>
 
-                    </div>
-
-                    <div class="News-card__save-div">
-
-                        <i class="fas fa-inbox News-card__save-icon"></i>
+                        <i class="fas fa-chevron-right News-category__icon-right"></i>
 
                     </div>
 
-                </section>
+                </div>
 
-            </div>
+                <div class="News-category__cards-wrapper">
+
+                    <section class="News-card">
+
+                        <div class="News-card__delete-div">
+
+                            <i class="fas fa-trash News-card__delete-save-icon"></i>
+
+                        </div>
+
+                        <div class="News-card__save-div">
+
+                            <i class="fas fa-inbox News-card__delete-save-icon"></i>
+
+                        </div>
+
+                        <div class="News-card__front">
+
+                            <img src="https://picsum.photos/80/80" alt="Article image" class="News-card__img">
+
+                            <div class="News-card__text-wrapper">
+
+                                <h3 class="News-card__h3 _card-title">Headline</h3>
+
+                                <p class="News-card__p _card-copy-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi delectus nesciunt nostrum officiis veritatis.</p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
 
         </section>
 

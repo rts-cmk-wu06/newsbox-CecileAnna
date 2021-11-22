@@ -89,9 +89,10 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-  /* Hide default HTML checkbox */
 }
-.Categories-cards__switch input {
+
+/* Hide default HTML checkbox */
+._input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -109,7 +110,7 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-._slider :before {
+._slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -124,10 +125,10 @@
 ._input:checked + ._slider {
   background-color: #2196F3;
 }
-._input:checked + ._slider :focus + ._slider {
+._input:checked + ._slider:focus + ._slider {
   box-shadow: 0 0 1px #2196F3;
 }
-._input:checked + ._slider :checked + ._slider:before {
+._input:checked + ._slider:checked + ._slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -137,7 +138,6 @@
 ._slider._round {
   border-radius: 34px;
 }
-
 ._slider._round:before {
   border-radius: 50%;
 }
@@ -149,69 +149,182 @@
   width: 100%;
   gap: 0.7rem;
 }
-
 .Header__top {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-
 .Header__bottom-nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-
 .Header__nav {
   color: #324755;
 }
-
 .Header__icons-wrapper {
   display: flex;
   gap: 0.3rem;
 }
-
 .Header__icon-top {
   font-size: 1rem;
   color: #1B1C20;
 }
-
 .Header__time-exact {
   font-weight: bold;
 }
-
 .Header__icon-buttom {
   font-size: 1.5rem;
 }
-
 .Header__h1 {
   font-size: 1.5rem;
   color: #324755;
 }
 
-.Search__ {
+.Main {
+  display: flex;
+  justify-content: center;
+}
+
+.Search {
   display: flex;
   flex-flow: column-reverse nowrap;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  padding: 1rem;
+  padding: 0 1rem 0.7rem 1rem;
+  margin: 0;
+  border-top: 0.08rem solid rgba(207, 202, 202, 0.822);
+  border-bottom: 0.08rem solid rgba(207, 202, 202, 0.822);
+  width: 100%;
 }
-
 .Search__input {
   background: #F0F3F4;
-  padding: 1rem 1rem 1rem 2.5rem;
+  padding: 1rem;
   margin: 1rem;
   z-index: 4;
   border-radius: 3px;
   color: #C8D1D3;
   border: none;
-  width: 90%;
+  width: 100%;
 }
-
 .Search__icon {
   position: relative;
-  top: -3rem;
-  left: 80%;
+  top: 3rem;
+  left: 36%;
   z-index: 6;
   color: #C8D1D3;
+}
+
+.News-category {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.News-category__bar {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.News-category__content-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 0.08rem solid rgba(207, 202, 202, 0.822);
+  border-bottom: 0.08rem solid rgba(207, 202, 202, 0.822);
+}
+.News-category__title-wrapper {
+  display: flex;
+  align-items: center;
+}
+.News-category__img {
+  object-fit: cover;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+  box-shadow: 0.08rem 0.7rem 1rem rgba(95, 93, 93, 0.7);
+}
+.News-category__title {
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+.News-category__icon-wrapper {
+  display: flex;
+  font-size: 1.3rem;
+}
+.News-category__icon-down {
+  color: #324755;
+}
+.News-category__icon-right {
+  color: #324755;
+}
+.News-category__cards-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.News-card {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  grid-auto-rows: 21vh;
+  transition: height 1.5s ease-in-out;
+}
+.News-card__front {
+  display: flex;
+  padding: 2rem 1rem;
+  height: 21vh;
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.News-card__img {
+  object-fit: cover;
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 100%;
+}
+.News-card__text-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 1rem;
+}
+.News-card__h3 {
+  margin-bottom: 0.4rem;
+}
+.News-card__p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.News-card__delete-div {
+  height: 21vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D95454;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.News-card__save-div {
+  height: 21vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87BCBF;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.News-card__delete-save-icon {
+  font-size: 2rem;
+  color: white;
 }
