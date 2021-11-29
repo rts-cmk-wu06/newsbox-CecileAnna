@@ -15,70 +15,74 @@
 
     <main class="News-main">
 
-        <section class="News-category">
+        <section class="News-cards" id="News-cards">
 
-            <section class="News-category__bar" id="News-category-business">
+            <section class="News-category">
 
-                <div class="News-category__content-wrapper">
+                <section class="News-category__bar" id="News-category-business">
 
-                    <div class="News-category__title-wrapper">
+                    <div class="News-category__content-wrapper">
 
-                        <img src="https://picsum.photos/100/100" alt="Category icon" class="News-category__img">
+                        <div class="News-category__title-wrapper">
 
-                        <h2 class="News-category__title _section-heading">Category</h2>
+                            <img src="https://picsum.photos/100/100" alt="Category icon" class="News-category__img">
 
-                    </div>
-
-                    <div class="News-category__icon-wrapper">
-
-                        <i class="fas fa-chevron-down News-category__icon-down"></i>
-
-                        <i class="fas fa-chevron-right News-category__icon-right"></i>
-
-                    </div>
-
-                </div>
-
-                <div class="News-category__cards-wrapper">
-
-                    <section class="News-card">
-
-                        <div class="News-card__delete-div">
-
-                            <i class="fas fa-trash News-card__delete-save-icon"></i>
+                            <h2 class="News-category__title _section-heading">Category</h2>
 
                         </div>
 
-                        <div class="News-card__save-div">
+                        <div class="News-category__icon-wrapper">
 
-                            <i class="fas fa-inbox News-card__delete-save-icon"></i>
+                            <i class="fas fa-chevron-down News-category__icon-down"></i>
+
+                            <i class="fas fa-chevron-right News-category__icon-right"></i>
 
                         </div>
 
-                        <div class="News-card__front">
+                    </div>
 
-                            <img src="https://picsum.photos/80/80" alt="Article image" class="News-card__img">
+                    <div class="News-category__cards-wrapper">
 
-                            <div class="News-card__text-wrapper">
+                        <section class="News-card animate__animated">
 
-                                <h3 class="News-card__h3 _card-title">Headline</h3>
+                            <div class="News-card__delete-div animate__animated">
 
-                                <p class="News-card__p _card-copy-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi delectus nesciunt nostrum officiis veritatis.</p>
+                                <i class="fas fa-trash News-card__delete-save-icon"></i>
 
                             </div>
 
-                        </div>
+                            <div class="News-card__save-div animate__animated">
 
-                    </section>
+                                <i class="fas fa-inbox News-card__delete-save-icon"></i>
 
-                </div>
+                            </div>
+
+                            <div class="News-card__front animate__animated">
+
+                                <img src="https://picsum.photos/80/80" alt="Article image" class="News-card__img">
+
+                                <div class="News-card__text-wrapper">
+
+                                    <h3 class="News-card__h3 _card-title">Headline</h3>
+
+                                    <p class="News-card__p _card-copy-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi delectus nesciunt nostrum officiis veritatis.</p>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </section>
 
             </section>
 
         </section>
-
     </main>
-
+    <script src="./js/build-news-cards-delete.js"></script>
+    <script src="./js/swipe-functionality.js"></script>
 </body>
 
 </html>

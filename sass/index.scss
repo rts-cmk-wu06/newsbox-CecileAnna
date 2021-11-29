@@ -249,6 +249,11 @@ $secondary-typo: Rift Soft;
 }
 
 //news-cards
+//utility classes
+._collapsed {
+    height: 0;
+}
+
 //category bar styles
 .News-category {
     display: flex;
