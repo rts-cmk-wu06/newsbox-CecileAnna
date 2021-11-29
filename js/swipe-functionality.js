@@ -53,18 +53,18 @@ newsCardFront.addEventListener('touchend', (event) => {
 
 });
 
-newsCardDelete.addEventListener("click", () => {
+// newsCardDelete.addEventListener("click", () => {
 
-    // swipeContainer.classList.add('animate__delay-1s');
-    // swipeContainer.classList.add('animate__slow');
-    newsCard.classList.add('animate__fadeOutLeft');
+//     // swipeContainer.classList.add('animate__delay-1s');
+//     // swipeContainer.classList.add('animate__slow');
+//     newsCard.classList.add('animate__fadeOutLeft');
 
-    setTimeout(function() {
-        newsCard.classList.add('_collapsed');
-    }, 50);
+//     setTimeout(function() {
+//         newsCard.classList.add('_collapsed');
+//     }, 50);
 
-    setTimeout(function() {
-        newsCard.remove()
-    }, 1600);
+//     setTimeout(function() {
+//         newsCard.remove()
+//     }, 1600);
 
-});
+// });

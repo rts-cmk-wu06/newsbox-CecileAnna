@@ -28,7 +28,7 @@ categorySectionTitleImg.alt = 'Category picture';
 
 const categorySectionTitleH2 = document.createElement('h2');
 categorySectionTitleH2.classList.add('News-category__title', '_section-heading');
-categorySectionTitleH2 = `${categoryTitle}`;
+categorySectionTitleH2.textContent = `${categoryTitle}`;
 
 const categorySectionIconWrapper = document.createElement('div');
 categorySectionIconWrapper.classList.add('News-category__icon-wrapper');
@@ -43,8 +43,8 @@ categorySectionIconRight.classList.add('fas', 'fa-chevron-right', 'News-category
 const newsCardsCategoryCardsWrapper = document.createElement('div');
 newsCardsCategoryCardsWrapper.classList.add('News-category__cards-wrapper');
 
-const newsCard = document.createElement('section');
-newsCard.classList.add('News-card', 'animate__animated');
+const newsCardSection = document.createElement('section');
+newsCardSection.classList.add('News-card', 'animate__animated');
 
 const newsCardDeleteDiv = document.createElement('div');
 newsCardDeleteDiv.classList.add('News-card__delete-div');
@@ -58,8 +58,8 @@ newsCardSaveDiv.classList.add('News-card__save-div');
 const newsCardSaveIcon = document.createElement("i");
 newsCardSaveIcon.classList.add('fas', 'fa-trash', 'News-card__delete-save-icon');
 
-const newsCardFront = document.createElement('div');
-newsCardFront.classList.add('News-card__front', 'animate__animated');
+const newsCardFrontDiv = document.createElement('div');
+newsCardFrontDiv.classList.add('News-card__front', 'animate__animated');
 
 const newsCardImg = document.createElement('img');
 newsCardImg.classList.add('News-card__img');
@@ -71,50 +71,58 @@ newsCardTextWrapper.classList.add('News-card__text-wrapper');
 
 const newsCardH3 = document.createElement('h3');
 newsCardH3.classList.add('News-card__h3', '_card-title');
-newsCardH3 = `${newsTitle}`;
+newsCardH3.textContent = `${newsTitle}`;
 
 const newsCardP = document.createElement('p');
 newsCardP.classList.add('News-card__p', '_card-copy-small');
-newsCardP = `${newsParagraf}`;
+newsCardP.textContent = `${newsParagraf}`;
 
 // appending parts
 
-newsCardTextWrapper.appendChild(newsCardP);
-
-newsCardTextWrapper.appendChild(newsCardH3);
-
-newsCardFront.appendChild(newsCardTextWrapper);
-
-newsCardFront.appendChild(newsCardImg);
-
-newsCardSaveDiv.appendChild(newsCardSaveIcon);
-
-newsCardDeleteDiv.appendChild(newsCardDeleteIcon);
-
-newsCard.appendChild(newsCardSaveDiv);
-
-newsCard.appendChild(newsCardDeleteDiv);
-
-newsCardsCategoryCardsWrapper.appendChild(newsCard);
-
-categorySectionBar.appendChild(newsCardsCategoryCardsWrapper);
-
-
-categorySectionIconWrapper.appendChild(categorySectionIconRight);
-
-categorySectionIconWrapper.appendChild(categorySectionIconDown);
+//category bar (for drop down)
+categorySectionTitleWrapper.appendChild(categorySectionTitleImg);
 
 categorySectionTitleWrapper.appendChild(categorySectionTitleH2);
 
-categorySectionTitleWrapper.appendChild(categorySectionTitleImg);
+categorySectionContentWrapper.appendChild(categorySectionTitleWrapper);
+
+categorySectionIconWrapper.appendChild(categorySectionIconDown);
+
+categorySectionIconWrapper.appendChild(categorySectionIconRight);
 
 categorySectionContentWrapper.appendChild(categorySectionIconWrapper);
 
-categorySectionContentWrapper.appendChild(categorySectionTitleWrapper);
-
-
 categorySectionBar.appendChild(categorySectionContentWrapper);
 
+//news cards
+newsCardDeleteDiv.appendChild(newsCardDeleteIcon);
+
+newsCardSection.appendChild(newsCardDeleteDiv);
+
+
+newsCardSaveDiv.appendChild(newsCardSaveIcon);
+
+newsCardSection.appendChild(newsCardSaveDiv);
+
+
+newsCardFrontDiv.appendChild(newsCardImg);
+
+newsCardTextWrapper.appendChild(newsCardH3);
+
+newsCardTextWrapper.appendChild(newsCardP);
+
+newsCardFrontDiv.appendChild(newsCardTextWrapper);
+
+newsCardSection.appendChild(newsCardFrontDiv);
+
+//appending a card to the card wrapper under a certain category of articles
+newsCardsCategoryCardsWrapper.appendChild(newsCardSection);
+
+//appending wrapper for article cards under category
+categorySectionBar.appendChild(newsCardsCategoryCardsWrapper);
+
+
+//general containers for articles (categories as well as cards)
 newsCardsCategorySection.appendChild(categorySectionBar);
 
 newsCardsContainer.appendChild(newsCardsCategorySection);
