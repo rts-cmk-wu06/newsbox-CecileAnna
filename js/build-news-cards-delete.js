@@ -5,6 +5,7 @@ let newsCategory;
 let categoryTitle;
 let newsTitle;
 let newsParagraf;
+let newsUrl;
 
 //creating elements
 //for category part
@@ -61,6 +62,9 @@ newsCardSaveIcon.classList.add('fas', 'fa-trash', 'News-card__delete-save-icon')
 const newsCardFrontDiv = document.createElement('div');
 newsCardFrontDiv.classList.add('News-card__front', 'animate__animated');
 
+const newsCardA = document.createElement('a');
+newsCardA.href = `${newsUrl}`;
+
 const newsCardImg = document.createElement('img');
 newsCardImg.classList.add('News-card__img');
 newsCardImg.src = 'https://picsum.photos/80/80';
@@ -105,7 +109,9 @@ newsCardSaveDiv.appendChild(newsCardSaveIcon);
 newsCardSection.appendChild(newsCardSaveDiv);
 
 
-newsCardFrontDiv.appendChild(newsCardImg);
+newsCardFrontDiv.appendChild(newsCardA);
+
+newsCardA.appendChild(newsCardImg);
 
 newsCardTextWrapper.appendChild(newsCardH3);
 

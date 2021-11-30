@@ -10,6 +10,8 @@ let travelNewsArray = [];
 
 axios.get(urlHome).then(response => {
 
+    console.log(response.data);
+
     articleArray = response.data.results;
 
     // console.log(articleArray);
@@ -18,6 +20,7 @@ axios.get(urlHome).then(response => {
 
 
         if (el.section === 'business') {
+            // console.log(el);
 
             businessNewsArray.push(el);
 
