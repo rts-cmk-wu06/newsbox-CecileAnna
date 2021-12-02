@@ -249,6 +249,10 @@ $secondary-typo: Rift Soft;
 }
 
 //news-cards
+.News-cards {
+    margin: 6.7rem 0 0 0;
+}
+
 //utility classes
 ._collapsed {
     height: 0;
@@ -331,10 +335,14 @@ $secondary-typo: Rift Soft;
         display: flex;
         flex-flow: column nowrap;
         margin-left: 1rem;
+        width: 80%;
     }
     &__h3 {
         margin-bottom: 0.4rem;
         text-transform: capitalize;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     &__p {
         display: -webkit-box;
